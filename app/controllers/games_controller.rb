@@ -35,7 +35,7 @@ class GamesController < ApplicationController
   def return_result(word, grid, attempt, result)
     gridtest = get_gridtest(grid, attempt)
 
-    if word["found"] && (grid.join('').downcase.split & attempt.chars).size == gridtest
+    if word["found"] && (grid.join(' ').downcase.split & attempt.chars).size == gridtest
       result[:message] = 'Well Done!'
       result[:score] = attempt.size + (20 - (result[:time])).to_i
     elsif word["found"]

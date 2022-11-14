@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Score</h1>
+  <p>Time Taken to answer: <%= @result[:time] %> seconds</p>
+  <p>Your score: <%= @result[:score] %></p>
+  <p class="last"><b><%= @result[:message] %></b></p>
+  <%= link_to "Play Again", new_path %>
+</div>
